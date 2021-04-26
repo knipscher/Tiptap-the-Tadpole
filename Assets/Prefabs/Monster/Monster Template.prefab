@@ -98,6 +98,7 @@ MonoBehaviour:
   minXSpawnPosition: -1.5
   maxXSpawnPosition: 1.5
   eyeLocator: {fileID: 2175347226747883125}
+  toothLocator: {fileID: 1269924235194050464}
   leftFinLocator: {fileID: 5258443795103538142}
   rightFinLocator: {fileID: 8496779524943225166}
   tailFinLocator: {fileID: 9093008794219208983}
@@ -115,7 +116,20 @@ MonoBehaviour:
   - 20
   monsterCreationTime: 10
   monsterTimeSlider: {fileID: 0}
-  distanceThreshold: 140
+  distanceThreshold: 150
+--- !u!114 &1269924235194050464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923533717219462594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2dd386a4ea85a44828a0d7ef0a77a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMouseOver: 0
 --- !u!1 &5163061538734676932
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +336,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4365456289105076169, guid: 6849342f0e7c3bb4f9647ed65d3facad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6849342f0e7c3bb4f9647ed65d3facad, type: 3}
+--- !u!1 &3923533717219462594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3482929481531539031, guid: 6849342f0e7c3bb4f9647ed65d3facad,
+    type: 3}
+  m_PrefabInstance: {fileID: 443297560028672917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5955056852102965208 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6089557670100210765, guid: 6849342f0e7c3bb4f9647ed65d3facad,

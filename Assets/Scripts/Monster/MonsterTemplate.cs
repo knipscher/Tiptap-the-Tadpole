@@ -20,6 +20,8 @@ public class MonsterTemplate : MonoBehaviour
     [SerializeField]
     private MonsterPartLocator eyeLocator = default;
     [SerializeField]
+    private MonsterPartLocator toothLocator = default;
+    [SerializeField]
     private MonsterPartLocator leftFinLocator = default;
     [SerializeField]
     private MonsterPartLocator rightFinLocator = default;
@@ -225,8 +227,15 @@ public class MonsterTemplate : MonoBehaviour
                     }
                     break;
                 case PartType.Tooth:
-                    SetMonsterStatsCaption("+1 tooth!");
-                    SoundEffectsManager.instance.PlaySoundEffect(SoundEffect.Correct);
+                    if (toothLocator.isMouseOver)
+                    {
+                        SetMonsterStatsCaption("+1 tooth!");
+                        SoundEffectsManager.instance.PlaySoundEffect(SoundEffect.Correct);
+                    }
+                    else
+                    {
+                        SoundEffectsManager.instance.PlaySoundEffect(SoundEffect.Incorrect);
+                    }
                     break;
                 default:
                     // default case includes teeth, because they will work no matter where they are placed & don't need a location check
